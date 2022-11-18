@@ -1,4 +1,7 @@
 <template>
+  <div id = "emptyInput">
+    t
+  </div>
   <form @submit.prevent="doCreate">
     <input type="text" v-model="item" placeholder="Add ToDo Item" />
     <button>Create</button>
@@ -14,8 +17,15 @@ export default {
   setup(props) {
     let item = ref("");
     function doCreate() {
-      console.log("Create..." + item.value);
-      props.create(item.value);
+      if(item.value != ""){
+        console.log("Create..." + item.value);
+        props.create(item.value);
+      }
+      else{
+        const div = document.getElementById('emptyInput');
+        console.log("Input has to be set first");
+        div.innerHTML = "Please insert an item to add";
+      }
     }
     return { item, doCreate };
   }
