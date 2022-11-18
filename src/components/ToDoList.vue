@@ -38,6 +38,7 @@ export default {
 <style scoped>
 ul {
   list-style: none;
+  font-family: courier;
 }
 ul li {
   margin: 5px;

@@ -22,4 +22,12 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+input{
+  font-family: courier;
+}
+
+button{
+  font-family: courier;
+}
+</style>
